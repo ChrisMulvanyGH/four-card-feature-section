@@ -15,18 +15,114 @@
     --veryDarkBlue: hsl(234, 12%, 34%);
     --grayishBlue: hsl(229, 6%, 66%);
     --veryLightGray: hsl(0, 0%, 98%);
+    --white: #fff;
     
     /* --Layout */
-    --mobile: 23.4375em;
-    --desktop: 90em;
+    --mobile: 375px;
+    --desktop: 1440px;
+    --cardWidth: 311px;
+    --cardHeight: 222px;
 }  
 
 *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9375; /* 15px */
 }
 
 body {
-    margin: 0;
+    margin: 5.75em .625em 2.1875em .625em;
+    background-color: var(--veryLightGray);
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9375 /* 15px */
+    color: var(--grayishBlue);
+}
+
+header {
+    /* margin: 5.75em 2.5em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin: 0.5em 0 1em;
+    font-size: 0.9375rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--veryDarkBlue);
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--veryDarkBlue);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* -- Custom CSS -- */
+
+.container {
+    max-width: var(--mobile);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background-color: var(--white);
+    border-radius: .5em;
+    box-shadow: 5px 10px 30px rgb(0 0 0 / 14%);
+}
+
+.card__title {
+    margin-bottom: 0.25em;
+}
+
+.card__desc {
+    margin-bottom: 0.8em;
+    text-align: left;
+}
+
+.icon__container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card__icon {
+    margin-top: 1.125em;
+    max-width: 45px;
+    min-height: 45px;
+}
+
+.card--cyan {
+    border-top: 4px solid var(--cyan);
+}
+
+.card--red {
+    border-top: 4px solid var(--red);
+}
+
+.card--orange {
+    border-top: 4px solid var(--orange);
+}
+
+.card--blue {
+    border-top: 4px solid var(--blue);
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    font-weight: 200;
 }
